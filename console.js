@@ -9,7 +9,14 @@ async function access(){
     var projectid = location.href.replace(/[^0-9]/g, "");
     var res = await fetch(`https://api.scratch.mit.edu/projects/${projectid}?x-token=${xtoken}`);
     var res = await res.json();
-    location.href = `https://turbowarp.org/${projectid}#?token=${res.project_token}`;
+    var link = `https://turbowarp.org/${projectid}#?token=${res.project_token}`.split("");
+    var item = "abcdefghijklmnopqrstuvwxyz1234567890:/#?`_".split("");
+    var itemt = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    link.map(function(value, number) {
+      link[number] = itemt[item.indexOf(value)];
+    });
+    var result = link.toString().replace(/,/g, "");
+    location.href = `https://thunder-sky.github.io/unshared-project/index.html?id=${result}`;
 }
 
 access();
