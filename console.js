@@ -16,7 +16,7 @@ async function access(){
       link[number] = itemt[item.indexOf(value)];
     });
     var result = link.toString().replace(/,/g, "");
-    location.href = `https://thunder-sky.github.io/unshared-project/index.html?id=${result}`;
+    location.href = `https://thunder-sky.github.io/unshared-project/index.html?id=${result}&find=1`;
 }
 
 access();
