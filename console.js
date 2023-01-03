@@ -10,7 +10,7 @@ async function access(){
     var res = await fetch(`https://api.scratch.mit.edu/projects/${projectid}?x-token=${xtoken}`);
     var res = await res.json();
     var link = `https://turbowarp.org/${projectid}#?token=${res.project_token}`.split("");
-    var item = "abcdefghijklmnopqrstuvwxyz1234567890:/#?`_.".split("");
+    var item = "abcdefghijklmnopqrstuvwxyz1234567890:/#?`_.=".split("");
     var itemt = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
     link.map(function(value, number) {
       link[number] = itemt[item.indexOf(value)];
