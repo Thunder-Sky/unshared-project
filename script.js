@@ -1,6 +1,6 @@
 function fukugou(text){
     var itemt = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-    var item = "abcdefghijklmnopqrstuvwxyz1234567890:/#?`_.".split("");
+    var item = "abcdefghijklmnopqrstuvwxyz1234567890:/#?`_.=".split("");
     var text = text.split("");
     text.map(function(value, number) {
         text[number] = item[itemt.indexOf(value)];
