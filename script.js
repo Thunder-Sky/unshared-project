@@ -22,5 +22,5 @@ else {
     /* これはプロジェクトを見た人の処理 */
     var htmls = document.getElementById("urls");
     htmls.innerHTML = `<p>現在リダイレクト中です...しばらくお待ちください....</p>`;
-    console.log(fukugou(param.get("id")));
+    location.href = fukugou(param.get("id"));
 }
