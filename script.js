@@ -15,7 +15,7 @@ if(param.get("find") == "1") {
     /* これはプロジェクトを共有したい人の処理 */
     var htmls = document.getElementById("urls");
     var url = location.origin + location.pathname;
-    var res = fukugou(param.get("id"));
+    var res = param.get("id");
     htmls.innerHTML = `<p>このURLをコピーして送ろう</p><input type="text" value="${url}?id=${res}&find=2">`
 }
 else {
